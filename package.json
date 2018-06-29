@@ -1,0 +1,5 @@
+{
+  "dependencies" : {
+    "config-expander" : "^9.1.3"
+  }
+}
