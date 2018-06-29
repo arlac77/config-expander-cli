@@ -4,14 +4,12 @@
   "publishConfig": {
     "access": "public"
   },
-  "bin" : {
-    "config-expander" :"bin/config-expander"
+  "bin": {
+    "config-expander": "bin/config-expander"
   },
   "module": "src/config-expander.js",
   "description": "cli to work fir config-expander managed configs",
-  "keywords": [
-    "cli"
-  ],
+  "keywords": ["cli"],
   "contributors": [
     {
       "name": "Markus Felten",
@@ -32,7 +30,8 @@
     "travis-deploy-once": "travis-deploy-once"
   },
   "dependencies": {
-    "config-expander": "^9.1.3"
+    "config-expander": "^9.1.3",
+    "caporal": "^0.10.0"
   },
   "devDependencies": {
     "documentation": "^8.0.0",
@@ -60,24 +59,13 @@
   },
   "homepage": "https://github.com/arlac77/config-expander-cli#readme",
   "ava": {
-    "files": [
-      "build/*-test.js"
-    ],
-    "presets": [
-      "env"
-    ],
-    "require": [
-      "babel-register"
-    ]
+    "files": ["build/*-test.js"],
+    "presets": ["env"],
+    "require": ["babel-register"]
   },
   "nyc": {
-    "include": [
-      "build/*-test.js"
-    ],
-    "reporter": [
-      "lcov",
-      "text"
-    ],
+    "include": ["build/*-test.js"],
+    "reporter": ["lcov", "text"],
     "report-dir": "./build/coverage"
   },
   "xo": {
