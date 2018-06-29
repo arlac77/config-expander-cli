@@ -4,10 +4,13 @@
   "publishConfig": {
     "access": "public"
   },
-  "main": "dist/index.js",
-  "description": "{{description}}",
+  "bin" : {
+    "config-expander" :"bin/config-expander"
+  },
+  "module": "src/config-expander.js",
+  "description": "cli to work fir config-expander managed configs",
   "keywords": [
-    "npm-package-template"
+    "cli"
   ],
   "contributors": [
     {
@@ -23,8 +26,8 @@
     "pretest": "rollup -c tests/rollup.config.js",
     "posttest": "npm run prepare && markdown-doctest",
     "prepare": "rollup -c",
-    "docs": "documentation readme {{module}} --section=API",
-    "lint": "documentation lint {{module}}",
+    "docs": "documentation readme src/config-expander.js --section=API",
+    "lint": "documentation lint src/config-expander.js",
     "semantic-release": "semantic-release",
     "travis-deploy-once": "travis-deploy-once"
   },
