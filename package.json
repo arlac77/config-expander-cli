@@ -7,9 +7,7 @@
   "main": "dist/index.js",
   "module": "src/config-expander.js",
   "description": "cli to work fir config-expander managed configs",
-  "keywords": [
-    "cli"
-  ],
+  "keywords": ["cli"],
   "contributors": [
     {
       "name": "Markus Felten",
@@ -52,7 +50,7 @@
     "travis-deploy-once": "^5.0.1"
   },
   "engines": {
-    "node": ">=8.11"
+    "node": ">=10.5"
   },
   "repository": {
     "type": "git",
@@ -63,24 +61,13 @@
   },
   "homepage": "https://github.com/arlac77/config-expander-cli#readme",
   "ava": {
-    "files": [
-      "build/*-test.js"
-    ],
-    "presets": [
-      "env"
-    ],
-    "require": [
-      "babel-register"
-    ]
+    "files": ["build/*-test.js"],
+    "presets": ["env"],
+    "require": ["babel-register"]
   },
   "nyc": {
-    "include": [
-      "build/*-test.js"
-    ],
-    "reporter": [
-      "lcov",
-      "text"
-    ],
+    "include": ["build/*-test.js"],
+    "reporter": ["lcov", "text"],
     "report-dir": "./build/coverage"
   },
   "xo": {
