@@ -2,7 +2,7 @@ import { expand } from 'config-expander';
 import { version } from '../package.json';
 import { dirname, resolve, basename } from 'path';
 
-const program = require('caporal'),
+const program = require('caporal');
 
 program
   .version(version)
@@ -20,16 +20,13 @@ program
     };
 
     const config = await expand(
-      options.config
-        ? "${include('" + basename(options.config) + "')}"
-        : {
-          },
+      options.config ? "${include('" + basename(options.config) + "')}" : {},
       {
         constants
       }
     );
 
     logger.log(config);
-});
+  });
 
 program.parse(process.argv);
