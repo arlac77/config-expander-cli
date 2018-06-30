@@ -6,10 +6,8 @@
   },
   "main": "dist/index.js",
   "module": "src/config-expander.js",
-  "description": "cli to work fir config-expander managed configs",
-  "keywords": [
-    "cli"
-  ],
+  "description": "cli to work with config-expander managed configs",
+  "keywords": ["cli"],
   "contributors": [
     {
       "name": "Markus Felten",
@@ -64,24 +62,13 @@
   },
   "homepage": "https://github.com/arlac77/config-expander-cli#readme",
   "ava": {
-    "files": [
-      "build/*-test.js"
-    ],
-    "presets": [
-      "env"
-    ],
-    "require": [
-      "babel-register"
-    ]
+    "files": ["build/*-test.js"],
+    "presets": ["env"],
+    "require": ["babel-register"]
   },
   "nyc": {
-    "include": [
-      "build/*-test.js"
-    ],
-    "reporter": [
-      "lcov",
-      "text"
-    ],
+    "include": ["build/*-test.js"],
+    "reporter": ["lcov", "text"],
     "report-dir": "./build/coverage"
   },
   "xo": {
