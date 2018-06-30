@@ -4,12 +4,12 @@
   "publishConfig": {
     "access": "public"
   },
-  "bin": {
-    "config-expander": "bin/config-expander"
-  },
+  "main": "dist/index.js",
   "module": "src/config-expander.js",
   "description": "cli to work fir config-expander managed configs",
-  "keywords": ["cli"],
+  "keywords": [
+    "cli"
+  ],
   "contributors": [
     {
       "name": "Markus Felten",
@@ -17,6 +17,9 @@
     }
   ],
   "license": "BSD-2-Clause",
+  "bin": {
+    "config-expander": "bin/config-expander"
+  },
   "scripts": {
     "cover": "nyc --temp-directory build/nyc ava",
     "precover": "rollup -c tests/rollup.config.js",
@@ -45,7 +48,7 @@
     "rollup-plugin-multi-entry": "^2.0.2",
     "rollup-plugin-executable": "^1.2.0",
     "semantic-release": "^15.6.0",
-    "travis-deploy-once": "^5.0.0"
+    "travis-deploy-once": "^5.0.1"
   },
   "engines": {
     "node": ">=8.11"
@@ -59,13 +62,24 @@
   },
   "homepage": "https://github.com/arlac77/config-expander-cli#readme",
   "ava": {
-    "files": ["build/*-test.js"],
-    "presets": ["env"],
-    "require": ["babel-register"]
+    "files": [
+      "build/*-test.js"
+    ],
+    "presets": [
+      "env"
+    ],
+    "require": [
+      "babel-register"
+    ]
   },
   "nyc": {
-    "include": ["build/*-test.js"],
-    "reporter": ["lcov", "text"],
+    "include": [
+      "build/*-test.js"
+    ],
+    "reporter": [
+      "lcov",
+      "text"
+    ],
     "report-dir": "./build/coverage"
   },
   "xo": {
