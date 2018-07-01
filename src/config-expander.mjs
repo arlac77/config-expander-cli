@@ -7,26 +7,21 @@ const program = require('caporal');
 program
   .version(version)
   .description('evaluate configs')
-  .option('-c, --config <file>', 'use config from file')
+  .command('expand', 'expand config')
+  .argument('<config>', 'config file to expand')
   .action(async (args, options, logger) => {
-    if (options.debug) {
-      logLevel = 'debug';
-    } else if (options.trace) {
-      logLevel = 'trace';
-    }
-
     const constants = {
-      basedir: dirname(options.config || process.cwd())
+      basedir: dirname(args.config || process.cwd())
     };
 
     const config = await expand(
-      options.config ? "${include('" + basename(options.config) + "')}" : {},
+      args.config ? "${include('" + basename(args.config) + "')}" : {},
       {
         constants
       }
     );
 
-    logger.log(config);
+    console.log(config);
   });
 
 program.parse(process.argv);
