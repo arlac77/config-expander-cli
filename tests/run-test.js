@@ -23,7 +23,7 @@ test('config-expander expand constant', async t => {
     join(__dirname, '..', 'tests', 'fixtures', 'config.json')
   ]);
   t.regex(result.stdout, /"b":\s*77/);
-  //t.regex(result.stdout, /"c":\s*77/);
+  t.regex(result.stdout, /"c":\s*77/);
 });
 
 test('config-expander expand -d', async t => {
