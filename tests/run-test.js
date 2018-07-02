@@ -14,5 +14,5 @@ test('config-expander expand', async t => {
     'expand',
     join(__dirname, '..', 'tests', 'fixtures', 'config.json')
   ]);
-  t.regex(result.stdout, /a:\s*1/);
+  t.regex(result.stdout, /"a":\s*1/);
 });

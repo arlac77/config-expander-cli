@@ -21,7 +21,7 @@ program
       }
     );
 
-    console.log(config);
+    process.stdout.write(JSON.stringify(config, undefined, 2));
   });
 
 program.parse(process.argv);
