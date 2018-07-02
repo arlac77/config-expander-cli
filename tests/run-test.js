@@ -16,3 +16,12 @@ test('config-expander expand', async t => {
   ]);
   t.regex(result.stdout, /"a":\s*1/);
 });
+
+test('config-expander expand constant', async t => {
+  const result = await execa(join(__dirname, '..', 'bin', 'config-expander'), [
+    'expand',
+    join(__dirname, '..', 'tests', 'fixtures', 'config.json')
+  ]);
+  t.regex(result.stdout, /"b":\s*77/);
+  //t.regex(result.stdout, /"c":\s*77/);
+});

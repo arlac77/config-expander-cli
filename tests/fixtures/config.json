@@ -1,3 +1,8 @@
 {
-  "a": 1
+  "constants": {
+    "c1": 77
+  },
+  "a": 1,
+  "b": "${c1}",
+  "c": "${include('inc.json')}"
 }
