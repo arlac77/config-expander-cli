@@ -4,5 +4,6 @@
   },
   "a": 1,
   "b": "${c1}",
-  "c": "${include('inc.json')}"
+  "c": "${include('inc.json')}",
+  "d": "${c2}"
 }
