@@ -34,7 +34,7 @@
   },
   "dependencies": {
     "caporal": "^0.10.0",
-    "config-expander": "^9.1.6"
+    "config-expander": "^9.1.7"
   },
   "devDependencies": {
     "ava": "^0.25.0",
