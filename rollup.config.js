@@ -1,9 +1,9 @@
-import cleanup from 'rollup-plugin-cleanup';
-import resolve from 'rollup-plugin-node-resolve';
-import commonjs from 'rollup-plugin-commonjs';
-import executable from 'rollup-plugin-executable';
-import json from 'rollup-plugin-json';
-import pkg from './package.json';
+import cleanup from "rollup-plugin-cleanup";
+import resolve from "rollup-plugin-node-resolve";
+import commonjs from "rollup-plugin-commonjs";
+import executable from "rollup-plugin-executable";
+import json from "rollup-plugin-json";
+import pkg from "./package.json";
 
 export default [
   ...Object.keys(pkg.bin || {}).map(name => {
@@ -11,12 +11,13 @@ export default [
       input: `src/${name}.mjs`,
       output: {
         file: pkg.bin[name],
-        format: 'cjs',
-        banner: '#!/usr/bin/env node',
+        format: "cjs",
+        banner:
+          "#!/usr/bin/env node --experimental-modules --experimental-worker",
         interop: false
       },
       plugins: [resolve(), commonjs(), json(), executable()],
-      external: ['os', 'path', 'config-expander']
+      external: ["os", "path", "config-expander"]
     };
   })
 ];
