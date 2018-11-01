@@ -1,18 +1,18 @@
-import { expand } from 'config-expander';
-import { version } from '../package.json';
-import { dirname, resolve, basename } from 'path';
+import { expand } from "config-expander";
+import { version } from "../package.json";
+import { dirname, resolve, basename } from "path";
+import program from "caporal";
 
-const program = require('caporal');
 const configValues = [];
 
 program
   .version(version)
-  .description('evaluate configs')
-  .command('expand', 'expand config')
-  .option('-d --define <key=value>', 'define (config) value', value =>
+  .description("evaluate configs")
+  .command("expand", "expand config")
+  .option("-d --define <key=value>", "define (config) value", value =>
     configValues.push(value)
   )
-  .argument('<config>', 'config file to expand')
+  .argument("<config>", "config file to expand")
   .action(async (args, options, logger) => {
     const constants = {
       basedir: dirname(args.config || process.cwd())

@@ -7,7 +7,7 @@ import pkg from "./package.json";
 
 export default Object.keys(pkg.bin || {}).map(name => {
   return {
-    input: `src/${name}.mjs`,
+    input: `src/${name}-cli.mjs`,
     output: {
       file: pkg.bin[name],
       format: "cjs",
@@ -16,15 +16,15 @@ export default Object.keys(pkg.bin || {}).map(name => {
       interop: false
     },
     plugins: [
-      resolve(),
       commonjs(),
       json({
         include: "package.json",
         preferConst: true,
         compact: true
       }),
+      cleanup(),
       executable()
     ],
-    external: ["os", "path", "config-expander"]
+    external: ["os", "path", "config-expander", "caporal"]
   };
 });
