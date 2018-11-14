@@ -65,9 +65,6 @@
     "files": [
       "tests/*-test.js"
     ],
-    "presets": [
-      "env"
-    ],
     "require": [
       "esm"
     ],
