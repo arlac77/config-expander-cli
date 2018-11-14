@@ -24,6 +24,7 @@
     "cover": "c8 --temp-directory build/coverage ava && c8 report -r lcov --temp-directory build/coverage",
     "test": "ava",
     "posttest": "npm run prepare && markdown-doctest",
+    "pretest": "rollup -c",
     "prepare": "rollup -c",
     "docs": "documentation readme src/config-expander.js --section=API",
     "lint": "documentation lint src/config-expander.js",
