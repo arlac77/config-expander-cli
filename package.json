@@ -64,7 +64,8 @@
   "homepage": "https://github.com/arlac77/config-expander-cli#readme",
   "ava": {
     "files": [
-      "tests/*-test.js"
+      "tests/*-test.js",
+      "tests/*-test.mjs"
     ],
     "require": [
       "esm"
