@@ -22,12 +22,12 @@
   },
   "scripts": {
     "cover": "c8 --temp-directory build/coverage ava && c8 report -r lcov --temp-directory build/coverage",
-    "test": "ava",
-    "posttest": "npm run prepare && markdown-doctest",
-    "pretest": "rollup -c",
-    "prepare": "rollup -c",
     "docs": "documentation readme src/config-expander.js --section=API",
-    "lint": "documentation lint src/config-expander.js"
+    "lint": "documentation lint src/config-expander.js",
+    "posttest": "npm run prepare && markdown-doctest",
+    "prepare": "rollup -c",
+    "pretest": "rollup -c",
+    "test": "ava"
   },
   "dependencies": {
     "caporal": "^1.1.0",
@@ -35,7 +35,9 @@
   },
   "devDependencies": {
     "ava": "^1.0.1",
+    "c8": "^3.2.1",
     "documentation": "^9.1.1",
+    "esm": "^3.0.84",
     "execa": "^1.0.0",
     "markdown-doctest": "^0.9.1",
     "rollup": "^1.0.0",
@@ -44,9 +46,7 @@
     "rollup-plugin-executable": "^1.3.0",
     "rollup-plugin-json": "^3.1.0",
     "rollup-plugin-node-resolve": "^4.0.0",
-    "semantic-release": "^15.13.2",
-    "c8": "^3.2.1",
-    "esm": "^3.0.84"
+    "semantic-release": "^15.13.2"
   },
   "engines": {
     "node": ">=10.15.0"
