@@ -1,7 +1,7 @@
 import { expand } from "config-expander";
 import { version } from "../package.json";
 import { dirname, resolve, basename } from "path";
-import program from "caporal";
+import program from "commander";
 
 const configValues = [];
 
@@ -12,10 +12,10 @@ program
   .option("-d --define <key=value>", "define (config) value", value =>
     configValues.push(value)
   )
-  .argument("<config>", "config file to expand")
-  .action(async (args, options, logger) => {
+  .action(async (args) => {
+
     const constants = {
-      basedir: dirname(args.config || process.cwd())
+      basedir: dirname(args || process.cwd())
     };
 
     configValues.forEach(value => {
@@ -26,13 +26,11 @@ program
     });
 
     const config = await expand(
-      args.config ? "${include('" + basename(args.config) + "')}" : {},
+      args.config ? "${include('" + args + "')}" : {},
       {
         constants
       }
     );
 
     process.stdout.write(JSON.stringify(config, undefined, 2));
-  });
-
-program.parse(process.argv);
+  }).parse(process.argv);
