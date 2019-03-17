@@ -7,7 +7,6 @@
 [![Coverage Status](https://coveralls.io/repos/arlac77/config-expander-cli/badge.svg)](https://coveralls.io/r/arlac77/config-expander-cli)
 [![Known Vulnerabilities](https://snyk.io/test/github/arlac77/config-expander-cli/badge.svg)](https://snyk.io/test/github/arlac77/config-expander-cli)
 [![GitHub Issues](https://img.shields.io/github/issues/arlac77/config-expander-cli.svg?style=flat-square)](https://github.com/arlac77/config-expander-cli/issues)
-[![Stories in Ready](https://badge.waffle.io/arlac77/config-expander-cli.svg?label=ready&title=Ready)](http://waffle.io/arlac77/config-expander-cli)
 [![Dependency Status](https://david-dm.org/arlac77/config-expander-cli.svg)](https://david-dm.org/arlac77/config-expander-cli)
 [![devDependency Status](https://david-dm.org/arlac77/config-expander-cli/dev-status.svg)](https://david-dm.org/arlac77/config-expander-cli#info=devDependencies)
 [![docs](http://inch-ci.org/github/arlac77/config-expander-cli.svg?branch=master)](http://inch-ci.org/github/arlac77/config-expander-cli)
