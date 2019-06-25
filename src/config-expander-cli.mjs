@@ -1,13 +1,13 @@
 import { expand } from "config-expander";
-import { version } from "../package.json";
-import { dirname, resolve, basename } from "path";
+import { version, description } from "../package.json";
+import { dirname } from "path";
 import program from "commander";
 
 const configValues = [];
 
 program
   .version(version)
-  .description("evaluate configs")
+  .description(description)
   .command("expand", "expand config")
   .option("-d --define <key=value>", "define (config) value", value =>
     configValues.push(value)
