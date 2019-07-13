@@ -6,9 +6,7 @@ import executable from "rollup-plugin-executable";
 import json from "rollup-plugin-json";
 import pkg from "./package.json";
 
-const external = [
-  ...builtins
-];
+const external = [...builtins];
 
 export default Object.keys(pkg.bin || {}).map(name => {
   return {
@@ -17,7 +15,7 @@ export default Object.keys(pkg.bin || {}).map(name => {
       file: pkg.bin[name],
       format: "cjs",
       banner:
-        "#!/usr/bin/env -S node --experimental-modules",
+        '#!/bin/sh\n":" //# comment; exec /usr/bin/env node --experimental-modules "$0" "$@"',
       interop: false
     },
     plugins: [
