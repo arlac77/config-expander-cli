@@ -21,7 +21,7 @@
     "config-expander": "bin/config-expander"
   },
   "scripts": {
-    "cover": "c8 -x tests/** --temp-directory build/tmp ava && c8 report -r lcov -o build/coverage --temp-directory build/tmp",
+    "cover": "c8 -x 'tests/**/*.mjs' --temp-directory build/tmp ava && c8 report -r lcov -o build/coverage --temp-directory build/tmp",
     "docs": "documentation readme src/config-expander.js --section=API",
     "lint": "documentation lint src/config-expander.js",
     "posttest": "npm run prepare && markdown-doctest",
