@@ -2,8 +2,6 @@
 [![Known Vulnerabilities](https://snyk.io/test/github/arlac77/config-expander-cli/badge.svg)](https://snyk.io/test/github/arlac77/config-expander-cli)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 [![npm](https://img.shields.io/npm/v/config-expander-cli.svg)](https://www.npmjs.com/package/config-expander-cli)
-[![Greenkeeper](https://badges.greenkeeper.io/arlac77/config-expander-cli.svg)](https://greenkeeper.io/)
-[![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/arlac77/config-expander-cli)
 [![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
 [![minified size](https://badgen.net/bundlephobia/min/config-expander-cli)](https://bundlephobia.com/result?p=config-expander-cli)
 [![downloads](http://img.shields.io/npm/dm/config-expander-cli.svg?style=flat-square)](https://npmjs.org/package/config-expander-cli)
@@ -11,6 +9,8 @@
 [![Build Status](https://secure.travis-ci.org/arlac77/config-expander-cli.png)](http://travis-ci.org/arlac77/config-expander-cli)
 [![codecov.io](http://codecov.io/github/arlac77/config-expander-cli/coverage.svg?branch=master)](http://codecov.io/github/arlac77/config-expander-cli?branch=master)
 [![Coverage Status](https://coveralls.io/repos/arlac77/config-expander-cli/badge.svg)](https://coveralls.io/r/arlac77/config-expander-cli)
+[![Greenkeeper](https://badges.greenkeeper.io/arlac77/config-expander-cli.svg)](https://greenkeeper.io/)
+[![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/arlac77/config-expander-cli)
 
 ## config-expander-cli
 
