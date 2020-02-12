@@ -21,20 +21,22 @@
     "config-expander": "bin/config-expander"
   },
   "scripts": {
-    "cover": "c8 -x 'tests/**/*' --temp-directory build/tmp ava && c8 report -r lcov -o build/coverage --temp-directory build/tmp",
+    "cover": "c8 -x 'tests/**/*' --temp-directory build/tmp ava --timeout 2m && c8 report -r lcov -o build/coverage --temp-directory build/tmp",
     "docs": "documentation readme src/config-expander.js --section=API",
     "lint": "documentation lint src/config-expander.js",
     "prepare": "rollup -c",
     "pretest": "rollup -c",
-    "test": "ava"
+    "test": "ava --timeout 2m"
   },
   "dependencies": {
     "commander": "^4.0.1",
     "config-expander": "^11.0.3"
   },
   "devDependencies": {
+    "@rollup/plugin-commonjs": "^11.0.2",
     "@rollup/plugin-json": "^4.0.2",
     "@rollup/plugin-node-resolve": "^7.1.1",
+    "@rollup/plugin-typescript": "^3.0.0",
     "acorn-class-fields": "https://github.com/arlac77/acorn-class-fields.git",
     "ava": "^3.3.0",
     "builtin-modules": "^3.1.0",
@@ -42,12 +44,15 @@
     "documentation": "^12.1.4",
     "execa": "^3.3.0",
     "rollup": "^1.31.0",
+    "rollup-plugin-babel": "^4.3.3",
     "rollup-plugin-cleanup": "^3.1.1",
+    "rollup-plugin-consts": "^1.0.1",
     "rollup-plugin-executable": "^1.5.2",
+    "rollup-plugin-native": "^1.2.8",
     "semantic-release": "^17.0.2"
   },
   "engines": {
-    "node": ">=12.15.0"
+    "node": ">=12.16.0"
   },
   "repository": {
     "type": "git",
