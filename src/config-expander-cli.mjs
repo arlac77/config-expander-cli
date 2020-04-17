@@ -1,6 +1,15 @@
+import { readFileSync } from "fs";
+import { join, dirname } from "path";
+import { fileURLToPath } from "url";
 import { expand } from "config-expander";
-import { version, description } from "../package.json";
 import program from "commander";
+
+const { version, description, } = JSON.parse(
+  readFileSync(
+    join(dirname(fileURLToPath(import.meta.url)), "..", "package.json"),
+    { endoding: "utf8" }
+  )
+);
 
 const constants = {};
 
