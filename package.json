@@ -26,7 +26,7 @@
     "lint": "documentation lint src/config-expander-cli.mjs"
   },
   "dependencies": {
-    "commander": "^4.0.1",
+    "commander": "^5.0.0",
     "config-expander": "^11.0.3"
   },
   "devDependencies": {
@@ -37,7 +37,7 @@
     "semantic-release": "^17.0.4"
   },
   "engines": {
-    "node": ">=12.16.1"
+    "node": ">=12.16.3"
   },
   "repository": {
     "type": "git",

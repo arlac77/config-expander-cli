@@ -13,6 +13,13 @@ const { version, description } = JSON.parse(
   )
 );
 
+const { version, description, } = JSON.parse(
+  readFileSync(
+    join(dirname(fileURLToPath(import.meta.url)), "..", "package.json"),
+    { endoding: "utf8" }
+  )
+);
+
 const constants = {};
 
 program
