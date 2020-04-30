@@ -1,6 +1,17 @@
-import { expand } from "config-expander";
-import { version, description } from "../package.json";
+import { readFileSync } from "fs";
+import { join, resolve, dirname } from "path";
+import { fileURLToPath } from "url";
 import program from "commander";
+import { expand } from "config-expander";
+
+const here = dirname(fileURLToPath(import.meta.url));
+
+const { version, description } = JSON.parse(
+  readFileSync(
+    join(here, "..", "package.json"),
+    { endoding: "utf8" }
+  )
+);
 
 const constants = {};
 

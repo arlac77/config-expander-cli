@@ -4,8 +4,7 @@
   "publishConfig": {
     "access": "public"
   },
-  "main": "dist/index.js",
-  "module": "src/config-expander.js",
+  "main": "src/config-expander-cli.mjs",
   "description": "cli to work with config-expander managed configs",
   "keywords": [
     "cli"
@@ -18,33 +17,23 @@
   ],
   "license": "BSD-2-Clause",
   "bin": {
-    "config-expander": "bin/config-expander"
+    "config-expander": "src/config-expander-cli.mjs"
   },
   "scripts": {
-    "prepare": "rollup -c",
-    "pretest": "rollup -c",
     "test": "ava --timeout 2m",
     "cover": "c8 -x 'tests/**/*' --temp-directory build/tmp ava --timeout 2m && c8 report -r lcov -o build/coverage --temp-directory build/tmp",
-    "docs": "documentation readme src/config-expander.js --section=API",
-    "lint": "documentation lint src/config-expander.js"
+    "docs": "documentation readme src/config-expander-cli.mjs --section=API",
+    "lint": "documentation lint src/config-expander-cli.mjs"
   },
   "dependencies": {
     "commander": "^4.0.1",
     "config-expander": "^11.0.3"
   },
   "devDependencies": {
-    "@rollup/plugin-commonjs": "^11.0.2",
-    "@rollup/plugin-json": "^4.0.2",
-    "@rollup/plugin-node-resolve": "^7.1.1",
-    "acorn-class-fields": "https://github.com/arlac77/acorn-class-fields.git",
     "ava": "^3.5.2",
-    "builtin-modules": "^3.1.0",
     "c8": "^7.1.0",
     "documentation": "^12.2.0",
     "execa": "^3.3.0",
-    "rollup": "^2.3.2",
-    "rollup-plugin-cleanup": "^3.1.1",
-    "rollup-plugin-executable": "^1.5.3",
     "semantic-release": "^17.0.4"
   },
   "engines": {
@@ -60,8 +49,8 @@
   "homepage": "https://github.com/arlac77/config-expander-cli#readme",
   "template": {
     "inheritFrom": [
-      "arlac77/template-cli-app",
-      "arlac77/template-github"
+      "arlac77/template-esm-only",
+      "arlac77/template-arlac77-github"
     ]
   }
 }
