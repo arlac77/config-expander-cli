@@ -8,7 +8,8 @@
   "type": "module",
   "main": "src/config-expander-cli.mjs",
   "exports": {
-    ".": "./src/config-expander-cli.mjs"
+    ".": "./src/config-expander-cli.mjs",
+    "./": "./"
   },
   "description": "cli to work with config-expander managed configs",
   "keywords": [
