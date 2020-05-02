@@ -6,7 +6,7 @@
   },
   "sideEffects": false,
   "type": "module",
-  "main": "src/config-expander-cli.mjs",
+  "main": "./src/config-expander-cli.mjs",
   "exports": {
     ".": "./src/config-expander-cli.mjs",
     "./": "./"
