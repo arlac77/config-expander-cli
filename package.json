@@ -31,7 +31,7 @@
     "lint": "documentation lint ./src/config-expander-cli.mjs"
   },
   "dependencies": {
-    "commander": "^5.0.0",
+    "commander": "^6.0.0",
     "config-expander": "^11.0.3"
   },
   "devDependencies": {
