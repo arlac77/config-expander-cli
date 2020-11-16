@@ -1,23 +1,11 @@
 import { readFileSync } from "fs";
-import { join, resolve, dirname } from "path";
-import { fileURLToPath } from "url";
 import program from "commander";
 import { expand } from "config-expander";
 
-const here = dirname(fileURLToPath(import.meta.url));
-
 const { version, description } = JSON.parse(
-  readFileSync(
-    join(here, "..", "package.json"),
-    { endoding: "utf8" }
-  )
-);
-
-const { version, description, } = JSON.parse(
-  readFileSync(
-    join(dirname(fileURLToPath(import.meta.url)), "..", "package.json"),
-    { endoding: "utf8" }
-  )
+  readFileSync(new URL("../package.json", import.meta.url).pathname, {
+    endoding: "utf8"
+  })
 );
 
 const constants = {};
@@ -32,11 +20,9 @@ program
     }
   })
   .action(async args => {
-    const config = await expand("${include('" + args + "')}",
-      {
-        constants
-      }
-    );
+    const config = await expand("${include('" + args + "')}", {
+      constants
+    });
 
     process.stdout.write(JSON.stringify(config, undefined, 2));
   })
