@@ -3,7 +3,7 @@
 [![minified size](https://badgen.net/bundlephobia/min/config-expander-cli)](https://bundlephobia.com/result?p=config-expander-cli)
 [![downloads](http://img.shields.io/npm/dm/config-expander-cli.svg?style=flat-square)](https://npmjs.org/package/config-expander-cli)
 [![GitHub Issues](https://img.shields.io/github/issues/arlac77/config-expander-cli.svg?style=flat-square)](https://github.com/arlac77/config-expander-cli/issues)
-[![Build Action Status](https://img.shields.io/endpoint.svg?url=https%3A%2F%2Factions-badge.atrox.dev%2Farlac77%2Fconfig-expander-cli%2Fbadge&style=flat)](https://actions-badge.atrox.dev/arlac77/config-expander-cli/goto)
+[![Build Status](https://img.shields.io/endpoint.svg?url=https%3A%2F%2Factions-badge.atrox.dev%2Farlac77%2Fconfig-expander-cli%2Fbadge&style=flat)](https://actions-badge.atrox.dev/arlac77/config-expander-cli/goto)
 [![Styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 [![Known Vulnerabilities](https://snyk.io/test/github/arlac77/config-expander-cli/badge.svg)](https://snyk.io/test/github/arlac77/config-expander-cli)
