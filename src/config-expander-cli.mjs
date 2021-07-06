@@ -11,6 +11,7 @@ const { version, description } = JSON.parse(
 const constants = {};
 
 program
+  .argument('<config>')
   .version(version)
   .description(description)
   .option("-d --define <key=value>", "define (config) value", value => {
@@ -19,8 +20,8 @@ program
       constants[m[1]] = m[2];
     }
   })
-  .action(async args => {
-    const config = await expand("${include('" + args + "')}", {
+  .action(async configFile => {
+    const config = await expand("${include('" + configFile + "')}", {
       constants
     });
 
