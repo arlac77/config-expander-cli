@@ -31,7 +31,7 @@
   },
   "dependencies": {
     "commander": "^10.0.0",
-    "config-expander": "^13.0.5"
+    "config-expander": "^13.0.6"
   },
   "devDependencies": {
     "ava": "^5.2.0",
