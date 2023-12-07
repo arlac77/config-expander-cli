@@ -34,7 +34,7 @@
     "config-expander": "^13.0.8"
   },
   "devDependencies": {
-    "ava": "^6.0.0",
+    "ava": "^6.0.1",
     "c8": "^8.0.1",
     "documentation": "^14.0.2",
     "execa": "^8.0.1",
