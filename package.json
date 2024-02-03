@@ -46,7 +46,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/arlac77/config-expander-cli"
+    "url": "git+https://github.com/arlac77/config-expander-cli.git"
   },
   "bugs": {
     "url": "https://github.com/arlac77/config-expander-cli/issues"
