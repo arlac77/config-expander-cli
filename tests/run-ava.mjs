@@ -1,5 +1,5 @@
 import test from "ava";
-import execa from "execa";
+import { execa } from "execa";
 
 const main = new URL("../src/config-expander-cli.mjs", import.meta.url)
   .pathname;
