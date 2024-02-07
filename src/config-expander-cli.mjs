@@ -1,5 +1,5 @@
 import { readFileSync } from "node:fs";
-import program from "commander";
+import { program } from "commander";
 import { expand } from "config-expander";
 
 const { version, description } = JSON.parse(
