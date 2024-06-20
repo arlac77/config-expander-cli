@@ -8,3 +8,5 @@ bun.lockb
 .test
 .tmp
 bin
+types
+dist
